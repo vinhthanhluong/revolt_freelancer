@@ -1,0 +1,11 @@
+@use "../global" as *;
+.l-container {
+    width: 100%;
+    padding: 0 20px;
+    @include mq('md'){
+        max-width: $width-content;
+        margin:0 auto;
+        padding: 0 40px;
+    }
+}
+

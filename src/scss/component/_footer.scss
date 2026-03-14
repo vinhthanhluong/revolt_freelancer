@@ -1,0 +1,232 @@
+@use '../global' as *;
+.footer {
+    background-color: var(--colorbase);
+    border-radius: 20px 20px 0 0;
+    padding: 20px 20px 40px;
+    @include mq('md') {
+        padding: 20px 20px 108px;
+    }
+    &-recruit {
+        position: relative;
+        background: url(../images/common/bg_footer_recruit_01.webp) no-repeat
+            center/cover;
+        border-radius: 20px;
+        overflow: hidden;
+        padding: 60px 0;
+        @include mq('md') {
+            padding: 155px 0 100px;
+            min-height: 516px;
+        }
+        &::before {
+            position: absolute;
+            content: '';
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0.7;
+            background-color: #000;
+        }
+        .l-container {
+            position: relative;
+            z-index: 1;
+        }
+        &__head {
+            text-align: center;
+            @include mq('md') {
+                text-align: left;
+            }
+            .c-ttl01 {
+                position: relative;
+                @include mq('md') {
+                    top: -12px;
+                    left: clamped(-20, 0, 1440, 768);
+                }
+            }
+        }
+        &__flex {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            gap: 20px 0;
+            @include mq('md') {
+                flex-direction: row;
+                align-items: center;
+                gap: 30px clamped(50, 122, 768, 1440);
+            }
+        }
+        &__txt {
+            @extend %fz-20;
+            font-weight: 700;
+            color: #fff;
+            text-align: center;
+            @include mq('md') {
+                text-align: left;
+                line-height: 2.2;
+            }
+        }
+        &__btn {
+            margin-top: 20px;
+            @include mq('md') {
+                margin-top: 28px;
+            }
+            .c-btn01 {
+                margin: 0 auto;
+                @include mq('md') {
+                    margin: 0;
+                }
+            }
+        }
+    }
+    &-main {
+        margin-top: 30px;
+        @include mq('md') {
+            margin-top: 97px;
+        }
+        .l-container {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            max-width: 100%;
+            padding: 0;
+            @include mq('md') {
+                padding: 0 40px;
+                align-items: center;
+                justify-content: space-between;
+                flex-direction: row;
+                gap: 20px;
+                max-width: 1330px;
+            }
+        }
+        &__content {
+            @include mq('md') {
+                padding-right: 12px;
+            }
+        }
+    }
+    &-menu {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+        @include mq('md') {
+            display: flex;
+            align-items: center;
+            gap: 10px clamped(15, 20.4, 768, 1440);
+        }
+        &__link {
+            position: relative;
+            color: #fff;
+            font-family: var(--fontjost);
+            font-weight: 600;
+            display: inline-block;
+            line-height: 1.2;
+            @include mq('md') {
+                &:hover {
+                    &::after {
+                        opacity: 1;
+                    }
+                }
+            }
+            &::after {
+                position: absolute;
+                content: '';
+                left: 0;
+                bottom: 0;
+                background-color: #fff;
+                opacity: 0;
+                width: 100%;
+                height: 2px;
+                transition: all 0.5s;
+            }
+        }
+    }
+    &-logo {
+        position: relative;
+        max-width: 225px;
+        width: 100%;
+        margin: 0 auto;
+        @include mq('md') {
+            margin: 0;
+            width: clamped(140, 225, 768, 1440);
+            left: clamped(-3, 0, 1440, 768);
+            top: -1px;
+        }
+        &__link {
+            display: block;
+            @include mq('md') {
+                transition: all 0.5s;
+                &:hover {
+                    img {
+                        opacity: 0.8;
+                    }
+                }
+            }
+            img {
+                mix-blend-mode: plus-lighter;
+                -webkit-mix-blend-mode: plus-lighter;
+                transition: all 0.5s;
+            }
+        }
+    }
+    &-copyright {
+        margin-top: 20px;
+        @include mq('md') {
+            margin-top: 20px;
+        }
+        .l-container {
+            max-width: 100%;
+            padding: 0;
+            @include mq('md') {
+                padding: 0 40px;
+                max-width: 1330px;
+            }
+        }
+        &__txt {
+            color: #7d819a;
+            @extend %fz-12;
+            font-family: var(--fontjost);
+            font-weight: 500;
+            line-height: 1;
+            text-align: center;
+            @include mq('md') {
+                text-align: left;
+            }
+        }
+    }
+}
+
+.totop {
+    position: fixed;
+    background: #fff;
+    cursor: pointer;
+    width: 45px;
+    height: 45px;
+    right: 15px;
+    bottom: 20px;
+    z-index: 10;
+    display: none;
+    border-radius: 50%;
+    text-align: center;
+    border: solid 1px var(--colorbase);
+    @include mq('md') {
+        transition: all 0.5s;
+        width: 48px;
+        height: 48px;
+        right: 20px;
+        bottom: 10px;
+        &:hover {
+            opacity: 0.8;
+        }
+    }
+    &__arrow {
+        position: absolute;
+        left: calc(50% - 2px);
+        top: calc(50% - 1px);
+        width: 6px;
+        transform: translate(-50%, -50%);
+        @include mq('md') {
+            width: 6px;
+            left: calc(50% - 3px);
+        }
+    }
+}

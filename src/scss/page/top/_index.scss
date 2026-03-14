@@ -1,0 +1,19 @@
+@use '../../global' as *;
+
+
+.a, .b{
+    font-size: rem(23);
+}
+.a{
+    @extend %fz-20;
+    @include mq('md') {
+    
+    }
+}
+.b{
+    @extend %fz-20;
+}
+
+.c{
+    color: red;
+}

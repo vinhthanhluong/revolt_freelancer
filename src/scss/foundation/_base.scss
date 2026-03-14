@@ -1,0 +1,33 @@
+@use "../global" as *;
+
+body {
+    line-height: 1.7;
+    font-size: rem(14);
+    color: var(--colorbase);
+    font-family: $fontnoto;
+    @include mq('md'){
+        line-height: 1.8;
+        font-size: rem(16);
+    }
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.pc {
+    display: none !important;
+
+    @include mq(md) {
+        display: initial !important;
+    }
+}
+
+.sp {
+    display: initial !important;
+
+    @include mq(md) {
+        display: none !important;
+    }
+}

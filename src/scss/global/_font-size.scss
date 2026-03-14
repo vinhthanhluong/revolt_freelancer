@@ -1,0 +1,109 @@
+@use 'sass:meta';
+@use 'sass:math';
+@use './function' as *;
+@use './breakpoints' as *;
+
+@mixin fz($sp, $pc: null) {
+  font-size: if(meta.type-of($sp) == number, rem($sp), $sp);
+
+  @if $pc != null {
+    @include mq() {
+      font-size: if(meta.type-of($pc) == number, rem($pc), $pc);
+    }
+  }
+}
+%fz-11 {
+    @include fz(10, 11);
+}
+%fz-12 {
+    @include fz(10, 12);
+}
+%fz-13 {
+    @include fz(12, 13);
+}
+%fz-14 {
+    @include fz(12, 14);
+}
+%fz-15 {
+    @include fz(14, 15);
+}
+%fz-16 {
+    @include fz(14, 16);
+}
+%fz-17 {
+    @include fz(14, 17);
+}
+%fz-18 {
+    @include fz(16, 18);
+}
+%fz-19 {
+    @include fz(16, 19);
+}
+%fz-20 {
+    @include fz(16, 20);
+}
+%fz-21 {
+    @include fz(16, 21);
+}
+%fz-22 {
+    @include fz(18, 22);
+}
+%fz-23 {
+    @include fz(18, 23);
+}
+%fz-24 {
+    @include fz(18, 24);
+}
+%fz-26 {
+    @include fz(20, 26);
+}
+%fz-27 {
+    @include fz(20, 27);
+}
+%fz-28 {
+    @include fz(20, 28);
+}
+%fz-29 {
+    @include fz(20, 29);
+}
+%fz-30 {
+    @include fz(20, 30);
+}
+%fz-32 {
+    @include fz(20, clamped(26,32,768,1440));
+}
+
+%fz-36 {
+    @include fz(24, 36);
+}
+%fz-40 {
+    @include fz(24, 40);
+}
+%fz-41 {
+    @include fz(24, 41);
+}
+%fz-42 {
+    @include fz(24, 42);
+}
+%fz-43 {
+    @include fz(24, 43);
+}
+%fz-44 {
+    @include fz(24, 44);
+}
+
+%fz-45 {
+    @include fz(25, 45);
+}
+%fz-46 {
+    @include fz(26, 46);
+}
+%fz-47 {
+    @include fz(26, 47);
+}
+%fz-48 {
+    @include fz(26, 48);
+}
+%fz-80 {
+    @include fz(32, clamped(40, 80, 768, 1440));
+}

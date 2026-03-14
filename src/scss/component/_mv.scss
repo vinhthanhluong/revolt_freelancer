@@ -1,0 +1,15 @@
+@use "../global" as *;
+
+.c-mv{
+    padding: 30px 0;
+    @include mq('md') {
+        padding: 71px 0;
+    }
+    .c-ttl01{
+        &__ja{
+            @include mq('md') {
+                padding-left: 8.5px;
+            }
+        }
+    }
+}

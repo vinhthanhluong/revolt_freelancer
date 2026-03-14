@@ -1,0 +1,52 @@
+@use "../global" as *;
+
+.c-ttl01{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    @include mq('md') {
+        gap: 8px;
+    }
+    &__ja, &__en{
+        display: inline-block;
+    }
+    &__ja{
+        @extend %fz-32;
+        font-weight: 700;
+        line-height: 1.2;
+    }
+    &__en{
+        line-height: 1;
+        font-family: var(--fontkrona);
+        @extend %fz-80;
+    }
+}
+.c-ttl02{
+    font-weight: 700;
+    line-height: 1.6;
+    @extend %fz-40;
+    &.fz28{
+        @extend %fz-28;
+    }
+}
+
+.c-ttl03{
+    display: inline-flex;
+    flex-direction: column;
+    gap: 5px;
+    @include mq('md') {
+        flex-direction: row;
+        align-items: baseline;
+        gap: 5px 16px;
+    }
+    &__txt01{
+        font-weight: 700;
+        @extend %fz-32;
+        line-height: 1.6;
+    }
+    &__txt02{
+        font-family: var(--fontkrona);
+        line-height: 1;
+        @extend %fz-12;
+    }
+}
