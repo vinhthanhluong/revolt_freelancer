@@ -660,6 +660,7 @@
   }
 
   .faq {
+    margin-bottom: 20px;
     .c-ttl02 {
       margin-bottom: 30px;
       @include mq {
@@ -673,26 +674,60 @@
     .faq__item {
       background-color: #fff;
       margin-bottom: 17px;
+      position: relative;
+
       &:last-child {
         margin-bottom: 0;
       }
       &.active {
-        .faq__item--dsc {
-          display: block;
+        .faq__item--tt {
+          &::before {
+            background-image: url('data:image/svg+xml,<svg width="20" height="1" viewBox="0 0 20 1" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M20 0.5L2.30386e-07 0.499999" stroke="%23292C3D"/></svg>');
+          }
         }
       }
       &--tt {
+        position: relative;
         @extend %fz-18;
         font-weight: 700;
-        padding: 33px 32px;
+        padding: 15px 60px 15px 15px;
+        cursor: pointer;
+        &::before {
+          content: "";
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          margin: auto 0;
+          right: 15px;
+          width: 30px;
+          height: 30px;
+          border-radius: 100%;
+          background: url('data:image/svg+xml,<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9.99512 0V20" stroke="%23292C3D"/><path d="M20 9.99512L2.30386e-07 9.99512" stroke="%23292C3D"/></svg>')
+            center/12px auto no-repeat;
+          background-color: #f8f8f8;
+          transition: all 0.3s ease;
+          pointer-events: none;
+          @include mq {
+            right: 26px;
+            width: 48px;
+            height: 48px;
+            background-size: 20px;
+          }
+        }
+        @include mq {
+          padding: 33px 32px;
+          padding-right: 90px;
+        }
       }
 
       &--dsc {
-        padding: 0 30px 40px 32px;
-        margin-top: -3px;
         @extend %fz-12;
         line-height: 1.6;
         display: none;
+        padding: 0 15px;
+        @include mq {
+          padding: 0 30px 40px 32px;
+        }
       }
     }
   }
