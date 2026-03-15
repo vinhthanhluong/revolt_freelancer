@@ -37,13 +37,12 @@
         margin-bottom: 19px;
       }
       &:nth-child(odd) {
-        background-color: #eee;
-        // background: url('../../../../public/assets/images/business/business__bg01.webp');
+        background: url("../images/business/business__bg01.webp");
       }
-      &:nth-child(even){
-        .business__item--title{
-          &::before{
-            border-color: #EFEFEF;
+      &:nth-child(even) {
+        .business__item--title {
+          &::before {
+            border-color: #efefef;
           }
         }
       }
@@ -69,7 +68,7 @@
       &:last-child {
         margin-bottom: 0;
       }
-      a{
+      a {
         display: block;
       }
       &--img {
@@ -86,15 +85,16 @@
         font-weight: 700;
         margin-bottom: clamped(10, 20, 768, 1440);
         position: relative;
-        &::before{
-          content: '';
+        &::before {
+          content: "";
           position: absolute;
           top: 0;
           right: 0;
           width: 48px;
           height: 48px;
           border-radius: 100%;
-          background: url('data:image/svg+xml,<svg width="28" height="5" viewBox="0 0 28 5" fill="none" xmlns="http://www.w3.org/2000/svg"><rect y="3.57178" width="19.6353" height="1" fill="%23292C3D"/><path d="M13.5383 -4.67236e-05L27.135 4.57177H12.1338L13.5383 -4.67236e-05Z" fill="%23292C3D"/></svg>') center/27px auto no-repeat;
+          background: url('data:image/svg+xml,<svg width="28" height="5" viewBox="0 0 28 5" fill="none" xmlns="http://www.w3.org/2000/svg"><rect y="3.57178" width="19.6353" height="1" fill="%23292C3D"/><path d="M13.5383 -4.67236e-05L27.135 4.57177H12.1338L13.5383 -4.67236e-05Z" fill="%23292C3D"/></svg>')
+            center/27px auto no-repeat;
           background-color: #fff;
           border: 1px solid #fff;
         }
